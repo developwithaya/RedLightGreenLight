@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111111;
+    background-image: url(https://images.unsplash.com/photo-1633432695542-b2c8e2b8a26c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    color: #f5f5f5;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.play-screen{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    .top-menu, .bottom-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: fit-content;
+        padding: 0.5rem;
+    }
+
+    .bottom-menu {
+        top: unset;
+        left: 0;
+        bottom: 0;
+        background: #1d1d1d99;
+    }
+
+    .player-info, .settings {
+        background-color: #1d1d1d99;       
+        padding: 0.5rem;
+        width: fit-content;
+        display: flex;
+        gap: 0.5rem;
+
+        .icon {
+            border: 1px solid #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.125rem;
+
+            &:hover {
+                background-color: #f5f5f5;
+                color: #1d1d1d99;               cursor: pointer;
+            }
+        }
+    }
+
+    .player-info {
+        gap: 1rem;
+
+        .play-light {
+            background-color: green;
+            width: 60px;
+            height: 60px;
+            border-radius: 100rem;
+        }
+
+        .player-stats {
+            display: flex;
+            gap: 1rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                /* align-items: center; */
+                gap: 0.25rem;
+            }
+        }
+    }
+
+    .instructions {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222222;
+
+        .close-icon {
+            background-color: #1d1d1d99;           width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100rem;
+            position: absolute;
+            right: 0.5rem;
+            top: 0.75rem;
+            cursor: pointer;
+        }
+
+        .header {
+           h1 {
+             margin-bottom: 0.5rem;
+           }
+
+            background-color: #3F3C3B;
+            padding: 0.75rem;
+        }
+
+        .game-rules {
+            padding: 0.75rem;
+
+            h2 {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
